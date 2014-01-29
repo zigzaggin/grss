@@ -1,16 +1,8 @@
-/*
-    Document   : settings
-    Created on : Jan 28, 2014, 7:23:41 PM
-    Author     : Ben
-    Description:
-    Purpose of the stylesheet follows.
-*/
+//The width of the .container class, in px or %
+$container-width: 1120px;
 
-/*
-    TODO customize this sample style
-    Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
-*/
+//The width/height of gutters
+$gutter: 15px;
 
-root {
-    display: block;
-}
+//The number of columns available
+$columns: 16;

@@ -1,8 +1,56 @@
 @import "settings";
+$adjusted-gutter: $gutter /2;
 *, *:after, *:before
 {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.container
+{
+    width: $container-width;
+    padding-right: $adjusted-gutter;
+    padding-left: $adjusted-gutter;
+    margin-right: auto;
+    margin-left: auto;
+
+    &:before,&:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.r
+{
+    margin-left: -$adjusted-gutter;
+    margin-right: -$adjusted-gutter;
+    &:before,&:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%c
+{
+    float: left;
+    padding: 0 $adjusted-gutter;
+    position: relative;
+    min-height: 1px;
+    background: rgba(0,0,0,.1);
+}
+
+@for $c from 1 through $columns {
+    .c#{$c} {
+        @extend %c;
+        width: (100% / $columns) * $c;
+    }
 }
