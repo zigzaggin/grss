@@ -1,0 +1,25 @@
+$adjusted-rail: $rail-internal-width + ($rail-padding * 2);
+.rail
+{
+    @extend .relative;
+    width: $adjusted-rail;
+    float: $rail-position;
+    min-height: 400px;
+    background: #fafafc;
+}
+
+.content
+{
+    $f:right;
+    @if($rail-position == right){ $f:left };
+    float: $f;
+    margin-#{$rail-position}: -$adjusted-rail;
+    width: 100%;
+    .inner
+    {
+        @extend .relative;
+        width: auto;
+        float: none;
+        margin-#{$rail-position}: $adjusted-rail + $gutter;
+    }
+}

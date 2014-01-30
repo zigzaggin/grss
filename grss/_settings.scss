@@ -1,0 +1,22 @@
+/******************** CONTAINER SETTINGS ****************/
+//The width of the .container class, in px or %
+$container-width: 90%;
+
+
+/******************** GRID SETTINGS *********************/
+//The width/height of gutters
+$gutter: 20px;
+
+//The number of columns available
+$columns: 16;
+
+
+/******************** RAIL SETTINGS *********************/
+//Rail width, used in modules/rail
+$rail-internal-width: 300px;
+
+//Padding applied to the rail, making rail total width = $rail + ($rail-padding * 2)
+$rail-padding: $gutter /2;
+
+$rail-position: left;
+
